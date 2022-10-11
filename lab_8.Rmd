@@ -1,7 +1,7 @@
 ---
-title: "Lab 9"
+title: "Lab 8"
 author: "Your Name"
-date: "10/21/2021"
+date: "10/11/2022"
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -12,7 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-- Add your name to the author field on line 3, then switch to visual markdown editor.
+- Review the Week 8 lecture and reading before beginning.
+- Add your name to the author field on line 3.
 - Run the above code chunk to load `tidyverse`.
 - When possible, use `tidyverse` (`ggplot` and `dplyr`) instead of base R.
    - I recommend formatting/spacing your code like this hypothetical example:
