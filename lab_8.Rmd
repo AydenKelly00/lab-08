@@ -136,7 +136,7 @@ The publication can be found in [Goolsby et al. (2013) *Environmental Toxicology
 
 ```
 
-16. Create a new column in `toxicity` called `no_int_TU` (toxic units assuming no interactive effects between mixtures) -- fill it with `pmax(diphen_TU,sert_TU)`. Additionally, create a new dataset called `additive_dat` filtered from `toxicity` where `diphen == 0 | sert == 0`. I wrote the next part for you because it's a bit complicated -- just un-comment it once you're done, and it should work (if you followed the steps correctly). NOTE: to un-comment multiple lines at once, highlight the area, and hold down Ctrl Shift C. This allows you to mass un-comment or comment code.
+17. Create a new column in `toxicity` called `no_int_TU` (toxic units assuming no interactive effects between mixtures) -- fill it with `pmax(diphen_TU,sert_TU)`. Additionally, create a new dataset called `additive_dat` filtered from `toxicity` where `diphen == 0 | sert == 0`. I wrote the next part for you because it's a bit complicated -- just un-comment it once you're done, and it should work (if you followed the steps correctly). NOTE: to un-comment multiple lines at once, highlight the area, and hold down Ctrl Shift C. This allows you to mass un-comment or comment code.
 
 ```{r}
 
@@ -154,13 +154,13 @@ The publication can be found in [Goolsby et al. (2013) *Environmental Toxicology
 
 ```
 
-17. Paste the plot from #15 below, and then add a `geom_line` with `data = toxicity` and `mapping = aes(x = total_TU,y = actual_prop)`. Then add another `geom_line` with `data = toxicity` and `mapping = aes(x = total_TU_TU,y = additive_prop)` with `color = "red"`. Finally, add another `geom_line` with `data = toxicity` and `mapping = aes(x = total_TU,y = no_int_prop)` with `color = "blue"`.
+18. Paste the plot from #16 below, and then add a `geom_line` with `data = toxicity` and `mapping = aes(x = total_TU,y = actual_prop)`. Then add another `geom_line` with `data = toxicity` and `mapping = aes(x = total_TU,y = additive_prop)` with `color = "red"`. Finally, add another `geom_line` with `data = toxicity` and `mapping = aes(x = total_TU,y = no_int_prop)` with `color = "blue"`.
 
 ```{r}
 
 ```
 
-For #17, the red line indicates the expected mixture toxicity if the results were purely additive. The blue line indicates the expected mixture toxicity if the chemicals didn't interact at all. The black line indicates the actual mixture toxicity. We can see that the black line is to the right of the red line, which means that the actual mixture toxicity is *less than additive*. However, the black line is to the left of the blue line, which means the compounds do still exhibit some combined toxicity. In fact, for some treatments, combined of concentrations of individually sub-lethal doses of diphenhydramine and sertraline resulted in 100% lethal mixtures.
+For #18, the red line indicates the expected mixture toxicity if the results were purely additive. The blue line indicates the expected mixture toxicity if the chemicals didn't interact at all. The black line indicates the actual mixture toxicity. We can see that the black line is to the right of the red line, which means that the actual mixture toxicity is *less than additive*. However, the black line is to the left of the blue line, which means the compounds do still exhibit some combined toxicity. In fact, for some treatments, combined of concentrations of individually sub-lethal doses of diphenhydramine and sertraline resulted in 100% lethal mixtures.
 
 - When you are finished, Knit (resolve any errors so that it Knits successfully), then commit and push to GitHub.
 - Then upload the HTML and Rmd files to the Webcourses assignment.
